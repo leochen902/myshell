@@ -115,6 +115,8 @@ ls                     # eza with icons, no setlocale warning
 
 New Cursor terminal should show the Catppuccin powerline prompt (mauve / blue / green / peach / pink / sky) and `❯`.
 
+Scrollback / history is **50000 lines** everywhere: bash `HISTSIZE`, tmux `history-limit`, Cursor `terminal.integrated.scrollback`, iTerm2 `Scrollback Lines`, Terminal.app `ScrollbackLines`.
+
 ## tmux / vim cheat sheet (so you can explain it)
 
 tmux prefix is **`Ctrl-a`**. Search screen text: `Ctrl-a` `[` then `/` or `?`, `n`/`N` next/prev, `q` to quit.

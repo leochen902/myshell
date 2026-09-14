@@ -16,7 +16,7 @@ fi
 # History
 HISTCONTROL=ignoreboth
 HISTSIZE=50000
-HISTFILESIZE=100000
+HISTFILESIZE=50000
 HISTTIMEFORMAT='%F %T '
 shopt -s histappend
 shopt -s cmdhist

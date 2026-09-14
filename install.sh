@@ -91,8 +91,22 @@ target.write_text(json.dumps(data, indent=2) + "\n")
 PY
 fi
 
-echo "==> Terminal.app font + custom shell"
+echo "==> Terminal.app font + custom shell + 50k scrollback"
 defaults write com.apple.Terminal Shell -string "$BASH_BIN" || true
+python3 - "$BASH_BIN" <<'PY' || true
+import plistlib, pathlib, sys
+p = pathlib.Path.home()/"Library/Preferences/com.apple.Terminal.plist"
+if not p.exists():
+    raise SystemExit(0)
+data = plistlib.loads(p.read_bytes())
+prof = data.setdefault("Window Settings", {}).setdefault("Clear Dark", {})
+prof["ShouldLimitScrollback"] = 1
+prof["ScrollbackLines"] = 50000
+tmp = p.with_suffix(".plist.tmp")
+with tmp.open("wb") as f:
+    plistlib.dump(data, f, fmt=plistlib.FMT_BINARY)
+tmp.replace(p)
+PY
 osascript <<APPLESCRIPT || true
 tell application "Terminal"
   try
