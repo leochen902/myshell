@@ -17,6 +17,33 @@ set termguicolors
 set background=dark
 silent! colorscheme catppuccin_mocha
 
+" Cursor: block in normal, bar in insert; bright yellow so it is easy to spot
+set ttimeout
+set ttimeoutlen=10
+set cursorline
+set cursorlineopt=both
+set guicursor=n-v-c-sm:block-Cursor,i-ci-ve:ver25-iCursor,r-cr-o:hor20-Cursor
+let &t_SI = "\<Esc>[6 q\<Esc>]12;#a6e3a1\x7"
+let &t_SR = "\<Esc>[4 q\<Esc>]12;#fab387\x7"
+let &t_EI = "\<Esc>[2 q\<Esc>]12;#f9e2af\x7"
+
+function! s:HighlightCursor() abort
+  highlight Cursor guifg=#1e1e2e guibg=#f9e2af ctermfg=234 ctermbg=229
+  highlight iCursor guifg=#1e1e2e guibg=#a6e3a1 ctermfg=234 ctermbg=114
+  highlight CursorLine guibg=#45475a ctermbg=238 cterm=NONE gui=NONE
+  highlight CursorLineNr guifg=#f9e2af guibg=#45475a ctermfg=229 ctermbg=238 cterm=bold gui=bold
+endfunction
+augroup CursorVisible
+  autocmd!
+  autocmd ColorScheme * call s:HighlightCursor()
+  autocmd VimEnter * call s:HighlightCursor()
+  if exists('*echoraw')
+    autocmd VimEnter,VimResume * call echoraw(&t_EI)
+    autocmd VimLeave,VimSuspend * call echoraw("\<Esc>[0 q\<Esc>]112\x7")
+  endif
+augroup END
+call s:HighlightCursor()
+
 let g:lightline = {
       \ 'colorscheme': 'catppuccin_mocha',
       \ 'active': {
