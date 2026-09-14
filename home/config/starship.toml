@@ -1,0 +1,97 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+command_timeout = 1000
+
+format = """
+[](fg:#cba6f7)\
+$os\
+$username\
+[](bg:#89b4fa fg:#cba6f7)\
+$directory\
+[](fg:#89b4fa bg:#a6e3a1)\
+$git_branch\
+$git_status\
+[](fg:#a6e3a1 bg:#fab387)\
+$nodejs\
+$python\
+$rust\
+$golang\
+$c\
+[](fg:#fab387 bg:#f38ba8)\
+$cmd_duration\
+[](fg:#f38ba8 bg:#89dceb)\
+$time\
+[](fg:#89dceb)\
+$line_break\
+$character
+"""
+
+[os]
+disabled = false
+style = "bg:#cba6f7 fg:#1e1e2e"
+
+[os.symbols]
+Macos = "\uf179 "
+
+[username]
+show_always = true
+style_user = "bg:#cba6f7 fg:#1e1e2e"
+style_root = "bg:#cba6f7 fg:#1e1e2e"
+format = "[ $user ]($style)"
+
+[directory]
+style = "bg:#89b4fa fg:#1e1e2e"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "\uf418 "
+style = "bg:#a6e3a1 fg:#1e1e2e"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#a6e3a1 fg:#1e1e2e"
+format = "[$all_status$ahead_behind]($style)"
+
+[nodejs]
+symbol = "\ue718 "
+style = "bg:#fab387 fg:#1e1e2e"
+format = "[ $symbol($version) ]($style)"
+
+[python]
+symbol = "\ue73c "
+style = "bg:#fab387 fg:#1e1e2e"
+format = "[ $symbol($version) ]($style)"
+
+[rust]
+symbol = "\ue7a8 "
+style = "bg:#fab387 fg:#1e1e2e"
+format = "[ $symbol($version) ]($style)"
+
+[golang]
+symbol = "\ue724 "
+style = "bg:#fab387 fg:#1e1e2e"
+format = "[ $symbol($version) ]($style)"
+
+[c]
+symbol = "\ue61e "
+style = "bg:#fab387 fg:#1e1e2e"
+format = "[ $symbol($version) ]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "bg:#f38ba8 fg:#1e1e2e"
+format = "[ \uf252 $duration ]($style)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:#89dceb fg:#1e1e2e"
+format = "[ \uf017 $time ]($style)"
+
+[character]
+success_symbol = "[❯](bold #a6e3a1)"
+error_symbol = "[❯](bold #f38ba8)"
+vimcmd_symbol = "[❮](bold #89b4fa)"

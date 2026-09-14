@@ -1,0 +1,9 @@
+# Interactive zsh should hand off to Homebrew bash.
+# This covers Terminal / iTerm2 while the login shell is still zsh.
+if [[ -o interactive && -x /opt/homebrew/bin/bash && -z "${INSIDE_BASH_HANDOFF:-}" ]]; then
+  export INSIDE_BASH_HANDOFF=1
+  export SHELL=/opt/homebrew/bin/bash
+  exec /opt/homebrew/bin/bash -l
+fi
+
+. "$HOME/.local/bin/env"

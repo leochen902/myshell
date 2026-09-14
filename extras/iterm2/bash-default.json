@@ -1,0 +1,149 @@
+{
+  "Profiles": [
+    {
+      "Name": "Bash",
+      "Guid": "leochen-bash-default",
+      "Custom Command": "Yes",
+      "Command": "/opt/homebrew/bin/bash -l",
+      "Working Directory": "/Users/leochen",
+      "Prompt Before Closing 2": 2,
+      "Unlimited Scrollback": true,
+      "Columns": 140,
+      "Rows": 40,
+      "Normal Font": "JetBrainsMonoNF-Regular 14",
+      "Non Ascii Font": "JetBrainsMonoNF-Regular 14",
+      "Use Non-ASCII Font": false,
+      "Horizontal Spacing": 1,
+      "Vertical Spacing": 1,
+      "Use Ligatures": true,
+      "ASCII Ligatures": true,
+      "Non-ASCII Ligatures": true,
+      "Cursor Type": 1,
+      "Blinking Cursor": true,
+      "Use Bold Font": true,
+      "Use Bright Bold": true,
+      "Background Color": {
+        "Red Component": 0.117647,
+        "Green Component": 0.117647,
+        "Blue Component": 0.180392,
+        "Alpha Component": 1
+      },
+      "Foreground Color": {
+        "Red Component": 0.803922,
+        "Green Component": 0.839216,
+        "Blue Component": 0.956863,
+        "Alpha Component": 1
+      },
+      "Cursor Color": {
+        "Red Component": 0.960784,
+        "Green Component": 0.878431,
+        "Blue Component": 0.862745,
+        "Alpha Component": 1
+      },
+      "Cursor Text Color": {
+        "Red Component": 0.117647,
+        "Green Component": 0.117647,
+        "Blue Component": 0.180392,
+        "Alpha Component": 1
+      },
+      "Selection Color": {
+        "Red Component": 0.270588,
+        "Green Component": 0.278431,
+        "Blue Component": 0.352941,
+        "Alpha Component": 1
+      },
+      "Selected Text Color": {
+        "Red Component": 0.803922,
+        "Green Component": 0.839216,
+        "Blue Component": 0.956863,
+        "Alpha Component": 1
+      },
+      "Bold Color": {
+        "Red Component": 0.803922,
+        "Green Component": 0.839216,
+        "Blue Component": 0.956863,
+        "Alpha Component": 1
+      },
+      "Ansi 0 Color": {
+        "Red Component": 0.266667,
+        "Green Component": 0.278431,
+        "Blue Component": 0.352941
+      },
+      "Ansi 1 Color": {
+        "Red Component": 0.952941,
+        "Green Component": 0.545098,
+        "Blue Component": 0.658824
+      },
+      "Ansi 2 Color": {
+        "Red Component": 0.650980,
+        "Green Component": 0.890196,
+        "Blue Component": 0.631373
+      },
+      "Ansi 3 Color": {
+        "Red Component": 0.976471,
+        "Green Component": 0.886275,
+        "Blue Component": 0.686275
+      },
+      "Ansi 4 Color": {
+        "Red Component": 0.537255,
+        "Green Component": 0.705882,
+        "Blue Component": 0.980392
+      },
+      "Ansi 5 Color": {
+        "Red Component": 0.796078,
+        "Green Component": 0.650980,
+        "Blue Component": 0.968627
+      },
+      "Ansi 6 Color": {
+        "Red Component": 0.580392,
+        "Green Component": 0.886275,
+        "Blue Component": 0.835294
+      },
+      "Ansi 7 Color": {
+        "Red Component": 0.650980,
+        "Green Component": 0.678431,
+        "Blue Component": 0.784314
+      },
+      "Ansi 8 Color": {
+        "Red Component": 0.423529,
+        "Green Component": 0.439216,
+        "Blue Component": 0.525490
+      },
+      "Ansi 9 Color": {
+        "Red Component": 0.952941,
+        "Green Component": 0.545098,
+        "Blue Component": 0.658824
+      },
+      "Ansi 10 Color": {
+        "Red Component": 0.650980,
+        "Green Component": 0.890196,
+        "Blue Component": 0.631373
+      },
+      "Ansi 11 Color": {
+        "Red Component": 0.976471,
+        "Green Component": 0.886275,
+        "Blue Component": 0.686275
+      },
+      "Ansi 12 Color": {
+        "Red Component": 0.537255,
+        "Green Component": 0.705882,
+        "Blue Component": 0.980392
+      },
+      "Ansi 13 Color": {
+        "Red Component": 0.796078,
+        "Green Component": 0.650980,
+        "Blue Component": 0.968627
+      },
+      "Ansi 14 Color": {
+        "Red Component": 0.580392,
+        "Green Component": 0.886275,
+        "Blue Component": 0.835294
+      },
+      "Ansi 15 Color": {
+        "Red Component": 0.650980,
+        "Green Component": 0.678431,
+        "Blue Component": 0.784314
+      }
+    }
+  ]
+}

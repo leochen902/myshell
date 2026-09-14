@@ -1,0 +1,87 @@
+set nocompatible
+filetype plugin indent on
+syntax on
+set rtp+=/opt/homebrew/opt/fzf
+
+call plug#begin('~/.vim/plugged')
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+call plug#end()
+
+set termguicolors
+set background=dark
+silent! colorscheme catppuccin_mocha
+
+let g:lightline = {
+      \ 'colorscheme': 'catppuccin_mocha',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': { 'gitbranch': 'FugitiveHead' }
+      \ }
+set laststatus=2
+set noshowmode
+
+set number
+set relativenumber
+set cursorline
+set signcolumn=yes
+set mouse=a
+set clipboard=unnamed
+set hidden
+set encoding=utf-8
+set fileencoding=utf-8
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set wrap
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set scrolloff=8
+set sidescrolloff=8
+set splitbelow
+set splitright
+set wildmenu
+set wildmode=longest:full,full
+set updatetime=200
+set timeoutlen=400
+set undofile
+set undodir=~/.vim/undo
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+set shortmess+=c
+set backspace=indent,eol,start
+
+let mapleader = " "
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>h :nohlsearch<CR>
+nnoremap <leader>e :Explore<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>/ :Rg<CR>
+nnoremap <leader>g :GFiles<CR>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+vnoremap < <gv
+vnoremap > >gv
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
